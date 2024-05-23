@@ -1,0 +1,86 @@
+body{
+    background-color: #171717;
+    transition: 0.3s;
+    margin: 0;
+
+}
+.minHe{
+    min-height: 92vh;
+}
+.Calculator{
+    background-color: #22252d;
+    border-radius: 10px;
+    /* padding: 20px; */
+    max-width: 450px;
+    width: 100%;
+    margin:0 auto;
+    margin-top: 100px;
+    padding-top:25px;transition: 0.3s;
+    margin-bottom: 25px;
+}
+.Operations{
+display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    grid-gap: 10px;
+    gap: 10px;
+    background: #363d55;
+    padding: 35px 25px;
+    border-radius: 20px 20px 10px 10px;transition: 0.3s;
+
+    
+
+}
+.dot{
+    flex: 20.5%;
+}
+.dot button{
+    max-width: none;
+}
+.Operations .parent{
+display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+    gap: 10px;
+}
+.equals{
+    z-index: 1;
+}
+.equals button{
+    padding:98px 0;
+display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.last__pa{
+    margin-top: -102px;
+}
+
+
+.padd__box{
+    padding: 20px;
+}
+
+
+.noneBtn{
+    visibility: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .Calculator{
+        max-width: 300px;
+    }
+    .equals button{
+        padding:55px 0;        
+    }
+    
+    .last__pa{
+        margin-top: -60px;
+    }
+    .Calculator{
+        margin-top: 60px;
+    }
+    
+}
+
+
