@@ -1,8 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import Button from './components/Button'
 import Input from './components/Input'
-import React, { useState, useEffect } from 'react';
 import Darkmode from './components/Darkmode'
-import '../src/components/css/App.css';
+import * as math from 'mathjs';
+
 function App() {
 
   const [val, setVal] = useState(0);
@@ -32,12 +33,12 @@ function App() {
   let result;
   let status = false;
 
-  function Enter(e) { 
-    try { 
-      if (val.length) 
-      { 
-        result = eval(val); status = true; 
-      } 
+  function Enter(e) {
+    try {
+      if (val.length) {
+        result = math.evaluate(val);
+        status = true;
+      }
     } catch (ex) { }
     return (
       status ? !last_char ? setVal(val + "" + e.target.innerText + result) : setVal(0) : setVal(0)
